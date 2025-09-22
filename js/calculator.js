@@ -18,33 +18,31 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // BMR Calculation (Mifflin-St Jeor) [cite: 41]
+    // BMR Calculation
     let bmr;
     if (gender === "male") {
-      bmr = 10 * weight + 6.25 * height - 5 * age + 5; // [cite: 42]
+      bmr = 10 * weight + 6.25 * height - 5 * age + 5;
     } else {
-      bmr = 10 * weight + 6.25 * height - 5 * age - 161; // [cite: 43]
+      bmr = 10 * weight + 6.25 * height - 5 * age - 161;
     }
 
-    // TDEE Calculation [cite: 44]
+    // TDEE Calculation
     const activityMultipliers = {
       sedentary: 1.2,
       lightly_active: 1.375,
       moderately_active: 1.55,
       very_active: 1.725,
       super_active: 1.9
-    }; // [cite: 45]
-    const tdee = bmr * activityMultipliers[activity]; // [cite: 46]
+    };
+    const tdee = bmr * activityMultipliers[activity];
 
-    // Macronutrient Calculation [cite: 47]
-    const carbs = Math.round((tdee * 0.50) / 4); // [cite: 52, 56]
-    const protein = Math.round((tdee * 0.20) / 4); // [cite: 53, 57]
-    const fat = Math.round((tdee * 0.30) / 9); // [cite: 54, 58]
+    // Macronutrient Calculation
+    const carbs = Math.round((tdee * 0.50) / 4);
+    const protein = Math.round((tdee * 0.20) / 4);
+    const fat = Math.round((tdee * 0.30) / 9);
 
-    // Display results
     resultsSection.classList.remove("hidden");
-    
-    // Animate counters
+
     animateCounter("bmr", Math.round(bmr));
     animateCounter("tdee", Math.round(tdee));
 
@@ -52,12 +50,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("protein").textContent = protein;
     document.getElementById("fat").textContent = fat;
     
-    // Update progress bars
     updateProgressBar("carbs-progress", 50);
     updateProgressBar("protein-progress", 20);
     updateProgressBar("fat-progress", 30);
 
-    // Scroll to results
     resultsSection.scrollIntoView({ behavior: 'smooth' });
   });
 
@@ -85,7 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 15);
   }
 
-  // Function to update progress bar width
   function updateProgressBar(id, percentage) {
       const element = document.getElementById(id);
       setTimeout(() => {
