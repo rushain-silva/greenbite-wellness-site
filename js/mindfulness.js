@@ -1,26 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* ---------- BREATHING ANIMATION TEXT ---------- */
   const breathingText = document.getElementById("breathing-text");
   if (breathingText) {
     const steps = ["Breathe In", "Hold", "Breathe Out", "Hold"];
     let stepIndex = 0;
-
-    // The animation is 8s long, so each step is 2s.
-    // We change text halfway through the inhale/exhale animations.
+    
     setInterval(() => {
         breathingText.textContent = steps[stepIndex];
         stepIndex = (stepIndex + 1) % steps.length;
-    }, 2000); // Change text every 2 seconds
+    }, 2000);
   }
 
-  /* ---------- POMODORO TIMER ---------- */
+  /* POMODORO TIMER */
   const timerDisplay = document.getElementById("pomodoro-timer");
   const startBtn = document.getElementById("start-timer-btn");
   const pauseBtn = document.getElementById("pause-timer-btn");
   const resetBtn = document.getElementById("reset-timer-btn");
   const sessionCountEl = document.getElementById("session-count");
 
-  let totalTime = 25 * 60; // 25 minutes
+  let totalTime = 25 * 60;
   let timeLeft = totalTime;
   let timerInterval = null;
   let sessionCount = parseInt(localStorage.getItem("greenbite_sessions") || "0");
@@ -33,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startTimer() {
-    if (timerInterval) return; // Already running
+    if (timerInterval) return;
     timerInterval = setInterval(() => {
       if (timeLeft > 0) {
         timeLeft--;
@@ -60,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     timeLeft = totalTime;
     updateTimerDisplay();
   }
+
   
-  // Initial setup for timer elements if they exist
   if (timerDisplay) {
     updateTimerDisplay();
     sessionCountEl.textContent = sessionCount;
@@ -70,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resetBtn.addEventListener("click", resetTimer);
   }
 
-  /* ---------- AMBIENT SOUND TOGGLES ---------- */
+  /* AMBIENT SOUND TOGGLES */
   const soundButtons = document.querySelectorAll(".sound-btn");
   const rainAudio = document.getElementById("rain-audio");
   const wavesAudio = document.getElementById("waves-audio");
@@ -87,9 +84,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   soundButtons.forEach(button => {
     button.addEventListener("click", () => {
-        // Remove active class from all buttons
+     
         soundButtons.forEach(btn => btn.classList.remove("active"));
-        // Add active class to the clicked button
+
         button.classList.add("active");
 
         stopAllSounds();
