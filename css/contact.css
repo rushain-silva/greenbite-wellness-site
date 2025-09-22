@@ -1,7 +1,4 @@
-/* =========================
-   CONTACT PAGE STYLES
-   ========================= */
-
+/* CONTACT PAGE STYLES */
 .main-content {
   max-width: 800px;
   margin: 2rem auto;
@@ -141,11 +138,10 @@
   display: block; /* Removes bottom space */
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-   ========================= */
+
 @media (max-width: 600px) {
   .contact-section, .faq-section, .map-section {
     padding: 1.5rem;
   }
+
 }
