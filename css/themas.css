@@ -1,6 +1,4 @@
-/* ====== GENERAL THEME: HEADER, FOOTER, RESPONSIVENESS ====== */
-
-/* ====== Header ====== */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -49,15 +47,15 @@ nav a:hover {
 }
 
 #menu-btn {
-  display: none; /* Hidden on desktop */
+  display: none;
   font-size: 1.8rem;
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1001; /* Ensure it's above other content */
+  z-index: 1001;
 }
 
-/* ====== Footer ====== */
+/* Footer */
 footer {
   background: #1b1b1b;
   color: #ddd;
@@ -128,21 +126,21 @@ footer {
     color: #bbb;
 }
 
-/* ====== MOBILE RESPONSIVENESS (MEDIA QUERY) ====== */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   header {
     padding: 1rem;
   }
   
   #menu-btn {
-    display: block; /* Show hamburger menu on mobile */
+    display: block;
   }
 
   nav {
-    display: none; /* Hide nav by default */
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px; /* Position below header */
+    top: 70px;
     right: 1rem;
     background: white;
     width: 250px;
@@ -154,7 +152,7 @@ footer {
   }
 
   nav.show {
-    display: flex; /* Show nav when 'show' class is added by JS */
+    display: flex;
   }
 
   nav a {
@@ -163,10 +161,11 @@ footer {
   }
   
   .footer-top {
-      grid-template-columns: 1fr; /* Stack footer columns on mobile */
+      grid-template-columns: 1fr;
       text-align: center;
   }
   #newsletter-form {
       justify-content: center;
   }
+
 }
