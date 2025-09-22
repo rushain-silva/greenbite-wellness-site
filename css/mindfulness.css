@@ -1,7 +1,4 @@
-/* =========================
-   MINDFULNESS PAGE STYLES
-   ========================= */
-
+/* MINDFULNESS PAGE STYLES */
 .main-content {
   max-width: 800px;
   margin: 2rem auto;
@@ -141,7 +138,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
   .breathing-circle {
     width: 160px;
@@ -155,4 +152,5 @@
     flex-direction: column;
     gap: 0.7rem;
   }
+
 }
