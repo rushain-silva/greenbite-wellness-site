@@ -1,7 +1,4 @@
-/* =========================
-   WORKOUT PAGE STYLES
-   ========================= */
-
+/* WORKOUT PAGE STYLES */
 .main-content {
   max-width: 800px;
   margin: 2rem auto;
@@ -141,9 +138,10 @@
   cursor: not-allowed;
 }
 
-/* MOBILE RESPONSIVENESS */
+
 @media (max-width: 600px) {
   .main-content, .workout-generator-section {
     padding: 1rem;
   }
+
 }
