@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Mobile menu toggle logic
   const menuBtn = document.getElementById("menu-btn");
   const nav = document.getElementById("nav");
 
@@ -9,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Logic specific to the HOME page ---
+  // Logic specific to the HOME page 
   if (document.querySelector("#hero")) {
-    // Rotating slogans for the hero section
+    
     const slogans = [
       "Fuel Your Body, Mind, and Soul",
       "Nourish Your Way to Wellness",
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setInterval(() => {
         sloganIndex = (sloganIndex + 1) % slogans.length;
         sloganElement.textContent = slogans[sloganIndex];
-      }, 4000); // Change slogan every 4 seconds
+      }, 4000);
     }
 
     // Health tips of the day based on the day of the year
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // --- Logic for the Newsletter Form (in the footer of all pages) ---
+  // Logic for the Newsletter Form
   const newsletterForm = document.getElementById("newsletter-form");
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", e => {
