@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite - Workout Generator</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.jpg">
+  <link rel="stylesheet" href="css/workout.css">
+  <link rel="stylesheet" href="css/themas.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <a href="./home.html" class="logo-link">
+        <span class="leaf">🍃</span>
+        <h1>GreenBite</h1>
+      </a>
+    </div>
+    <nav id="nav">
+      <a href="./home.html">Home</a>
+      <a href="./recipes.html">Recipes</a>
+      <a href="./calculator.html">Calculator</a>
+      <a href="./workout.html">Workouts</a>
+      <a href="./mindfulness.html">Mindfulness</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <button id="menu-btn">☰</button>
+  </header>
+    
+  <main class="main-content">
+    <section class="workout-generator-section">
+      <h2>Workout Generator</h2>
+      <p class="section-description">Create your personalized workout in seconds. Just select your target body part and the equipment you have available.</p>
+      
+      <form id="workout-form" class="workout-form">
+        <div class="form-group">
+          <label for="body-part">Select Body Part:</label>
+          <select id="body-part" required>
+            <option value="full-body">Full Body</option>
+            <option value="arms">Arms</option>
+            <option value="legs">Legs</option>
+            <option value="core">Core</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="equipment">Select Equipment:</label>
+          <select id="equipment" required>
+            <option value="none">None (Bodyweight)</option>
+            <option value="dumbbells">Dumbbells</option>
+          </select>
+        </div>
+        <button type="submit" class="generate-btn">Generate Workout</button>
+      </form>
+
+      <div id="workout-display" class="workout-display hidden">
+        <h3>Your Custom Workout Plan</h3>
+        <ul id="workout-list" class="workout-list"></ul>
+        <div class="timer-section">
+          <h4>Exercise Timer</h4>
+          <div id="timer" class="timer">00:30</div>
+          <button id="start-timer-btn" class="timer-btn">Start 30s Timer</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h3>GreenBite 🍃</h3>
+        <p>Empowering your wellness journey with nutrition, fitness, and mindfulness solutions.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="./home.html">Home</a><a href="./recipes.html">Recipes</a><a href="./calculator.html">Calculator</a><a href="./workout.html">Workouts</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Meal Plans</a><a href="#">Exercise Library</a><a href="#">Meditation Guides</a>
+      </div>
+      <div>
+        <h4>Stay Updated</h4>
+        <form id="newsletter-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required />
+          <button type="submit">✉</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GreenBite. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+  
+  <script src="./js/workout.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

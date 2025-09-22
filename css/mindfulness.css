@@ -1,0 +1,158 @@
+/* =========================
+   MINDFULNESS PAGE STYLES
+   ========================= */
+
+.main-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.mindfulness-section {
+  background: #fff;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.mindfulness-section h2 {
+  text-align: center;
+  color: #2E8B57;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  text-align: center;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Breathing Circle */
+.breathing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  min-height: 250px;
+}
+
+.breathing-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #EDF7EF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #2B2D42;
+  box-shadow: 0 0 20px rgba(46, 139, 87, 0.3);
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    background-color: #d8f0dc;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #EDF7EF;
+  }
+}
+
+/* Pomodoro Timer Section */
+.timer-section {
+  text-align: center;
+}
+
+.timer {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #2E8B57;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timer-btn {
+  background: #2E8B57;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.timer-btn:hover {
+  background: #256b45;
+}
+
+.session-tracker {
+    color: #444;
+    font-weight: 500;
+}
+
+/* Ambient Sounds Section */
+.ambient-sound-section {
+  text-align: center;
+}
+
+.sound-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sound-btn {
+  background: #EDF7EF;
+  border: 1px solid #c8e6c9;
+  color: #2B2D42;
+  padding: 0.7rem 1.5rem;
+  margin: 0.3rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.sound-btn:hover {
+  background: #d8f0dc;
+  transform: translateY(-2px);
+}
+
+.sound-btn.active {
+  background: #2E8B57;
+  color: white;
+  border-color: #2E8B57;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .breathing-circle {
+    width: 160px;
+    height: 160px;
+    font-size: 1.2rem;
+  }
+  .timer {
+    font-size: 2.8rem;
+  }
+  .timer-controls, .sound-controls {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite - Healthy Recipes</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.jpg">
+  <link rel="stylesheet" href="css/recipes.css">
+  <link rel="stylesheet" href="css/themas.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <a href="./home.html" class="logo-link">
+        <span class="leaf">🍃</span>
+        <h1>GreenBite</h1>
+      </a>
+    </div>
+    <nav id="nav">
+      <a href="./home.html">Home</a>
+      <a href="./recipes.html">Recipes</a>
+      <a href="./calculator.html">Calculator</a>
+      <a href="./workout.html">Workouts</a>
+      <a href="./mindfulness.html">Mindfulness</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <button id="menu-btn">☰</button>
+  </header>
+
+  <main class="container">
+    <section class="search-filters">
+        <h2>Find Your Perfect Recipe</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by name or ingredient..." />
+        </div>
+        <div id="filterOptions" class="filters">
+            <select id="categoryFilter" aria-label="Filter by category">
+                <option value="All">All Categories</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+            <select id="cuisineFilter" aria-label="Filter by cuisine">
+                <option value="All">All Cuisines</option>
+                <option value="American">American</option>
+                <option value="Italian">Italian</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Asian">Asian</option>
+            </select>
+        </div>
+    </section>
+
+    <p id="recipeCount" class="recipe-count"></p>
+
+    <section id="recipeGrid" class="recipe-grid"></section>
+  </main>
+
+  <div id="recipeModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h3>GreenBite 🍃</h3>
+        <p>Empowering your wellness journey with nutrition, fitness, and mindfulness solutions.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="./home.html">Home</a><a href="./recipes.html">Recipes</a><a href="./calculator.html">Calculator</a><a href="./workout.html">Workouts</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Meal Plans</a><a href="#">Exercise Library</a><a href="#">Meditation Guides</a>
+      </div>
+      <div>
+        <h4>Stay Updated</h4>
+        <form id="newsletter-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required />
+          <button type="submit">✉</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GreenBite. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script src="js/recipes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

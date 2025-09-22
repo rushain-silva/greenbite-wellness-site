@@ -1,0 +1,151 @@
+/* =========================
+   CONTACT PAGE STYLES
+   ========================= */
+
+.main-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.contact-section, .faq-section, .map-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 2.5rem;
+}
+
+.contact-section h1, .faq-section h2, .map-section h2 {
+  text-align: center;
+  color: #2E8B57;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #2B2D42;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2E8B57;
+  box-shadow: 0 0 5px rgba(46,139,87,0.4);
+  outline: none;
+}
+
+.btn-primary {
+  background: #2E8B57;
+  color: #fff;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #256b45;
+  transform: translateY(-2px);
+}
+
+/* FAQ Section */
+.accordion .acc-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background: #EDF7EF;
+  border: none;
+  outline: none;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s ease;
+  position: relative;
+  padding-right: 30px;
+}
+.accordion .acc-btn::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2E8B57;
+    transition: transform 0.3s ease;
+}
+
+.accordion .acc-btn:hover,
+.accordion .acc-btn.active {
+  background: #d8f0dc;
+}
+
+.accordion .acc-btn.active::after {
+    transform: rotate(45deg);
+}
+
+.accordion .acc-panel {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  background: #fff;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion .acc-panel p {
+    padding: 1rem 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Map Section */
+.map-container {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.map-container iframe {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  display: block; /* Removes bottom space */
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+  .contact-section, .faq-section, .map-section {
+    padding: 1.5rem;
+  }
+}

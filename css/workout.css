@@ -1,0 +1,149 @@
+/* =========================
+   WORKOUT PAGE STYLES
+   ========================= */
+
+.main-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.workout-generator-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.workout-generator-section h2 {
+  text-align: center;
+  color: #2E8B57;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  text-align: center;
+  color: #555;
+  margin: 0 auto 2rem auto;
+  max-width: 600px;
+}
+
+.workout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2B2D42;
+}
+
+.form-group select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.generate-btn {
+  background: #2E8B57;
+  color: white;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.generate-btn:hover {
+  background: #256b45;
+  transform: translateY(-2px);
+}
+
+/* Workout Display */
+.workout-display {
+  margin-top: 2rem;
+  background: #f8fdf8;
+  padding: 2rem;
+  border: 1px solid #e0f0e3;
+  border-radius: 1rem;
+}
+.workout-display.hidden {
+  display: none;
+}
+
+.workout-display h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2E8B57;
+}
+
+.workout-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.workout-list li {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-left: 4px solid #2E8B57;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  font-size: 1.05rem;
+}
+.workout-list li strong {
+  color: #333;
+}
+
+/* Timer Section */
+.timer-section {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0.5rem 0 1rem 0;
+  color: #2E8B57;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.timer-btn {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.timer-btn:hover {
+  background: #f57c00;
+}
+.timer-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  .main-content, .workout-generator-section {
+    padding: 1rem;
+  }
+}

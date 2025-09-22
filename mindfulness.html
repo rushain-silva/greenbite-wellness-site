@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenBite - Mindfulness</title>
+  <link rel="icon" type="image/png" href="./assets/images/favicon.jpg">
+  <link rel="stylesheet" href="css/mindfulness.css">
+  <link rel="stylesheet" href="css/themas.css" />
+</head>
+<body>
+  <header id="header">
+    <div class="logo">
+      <a href="./home.html" class="logo-link">
+        <span class="leaf">🍃</span>
+        <h1>GreenBite</h1>
+      </a>
+    </div>
+    <nav id="nav">
+      <a href="./home.html">Home</a>
+      <a href="./recipes.html">Recipes</a>
+      <a href="./calculator.html">Calculator</a>
+      <a href="./workout.html">Workouts</a>
+      <a href="./mindfulness.html">Mindfulness</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+    <button id="menu-btn">☰</button>
+  </header>
+    
+  <main class="main-content">
+    <section class="mindfulness-section">
+      <h2>Mindful Breathing</h2>
+      <p class="section-description">Center yourself with our guided breathing exercise. Follow the animation and text prompts to regulate your breath and find calm.</p>
+      <div class="breathing-container">
+        <div class="breathing-circle">
+          <span id="breathing-text">Breathe In</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mindfulness-section">
+      <h2>Meditation Timer</h2>
+      <p class="section-description">Use this Pomodoro timer to focus during meditation or work sessions. Completed sessions are saved to track your progress.</p>
+      <div class="timer-section">
+        <div id="pomodoro-timer" class="timer">25:00</div>
+        <div class="timer-controls">
+          <button id="start-timer-btn" class="timer-btn">Start</button>
+          <button id="pause-timer-btn" class="timer-btn">Pause</button>
+          <button id="reset-timer-btn" class="timer-btn">Reset</button>
+        </div>
+        <p class="session-tracker">Completed sessions: <span id="session-count">0</span></p>
+      </div>
+    </section>
+      
+    <section class="mindfulness-section">
+      <h2>Ambient Sounds</h2>
+      <p class="section-description">Enhance your relaxation with calming background sounds. Choose an option below to play, and click 'Off' to stop.</p>
+      <div class="ambient-sound-section">
+        <div class="sound-controls">
+          <button class="sound-btn" data-sound="rain">🌧️ Rain</button>
+          <button class="sound-btn" data-sound="waves">🌊 Waves</button>
+          <button class="sound-btn active" data-sound="off">🔇 Off</button>
+        </div>
+        <audio id="rain-audio" src="assets/audios/real-rain-sound-379215.mp3" loop></audio>
+        <audio id="waves-audio" src="assets/audios/ocean-waves-266187.mp3" loop></audio>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <h3>GreenBite 🍃</h3>
+        <p>Empowering your wellness journey with nutrition, fitness, and mindfulness solutions.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="./home.html">Home</a><a href="./recipes.html">Recipes</a><a href="./calculator.html">Calculator</a><a href="./workout.html">Workouts</a>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <a href="#">Meal Plans</a><a href="#">Exercise Library</a><a href="#">Meditation Guides</a>
+      </div>
+      <div>
+        <h4>Stay Updated</h4>
+        <form id="newsletter-form">
+          <input type="email" id="email-input" placeholder="Enter your email" required />
+          <button type="submit">✉</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 GreenBite. All rights reserved.</p>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script src="./js/mindfulness.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
