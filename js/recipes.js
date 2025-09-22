@@ -9,17 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const categoryFilter = document.getElementById("categoryFilter");
     const cuisineFilter = document.getElementById("cuisineFilter");
 
-    let allRecipes = []; // This will store the recipes once fetched
+    let allRecipes = [];
 
-    // --- Fetch Recipe Data from JSON file ---
+    // Fetch Recipe Data from JSON file 
     async function loadRecipes() {
         try {
-            const response = await fetch('./recipe.json'); // Adjust path if you saved the JSON elsewhere
+            const response = await fetch('./recipe.json');
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             allRecipes = await response.json();
-            renderRecipes(); // Initial render after data is loaded
+            renderRecipes();
         } catch (error) {
             console.error("Could not fetch recipes:", error);
             recipeGrid.innerHTML = "<p>Could not load recipes. Please try again later.</p>";
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             return matchesSearch && matchesCategory && matchesCuisine;
         });
 
-        recipeGrid.innerHTML = ""; // Clear existing recipes
+        recipeGrid.innerHTML = "";
         filteredRecipes.forEach(recipe => {
             const card = document.createElement("div");
             card.className = "recipe-card";
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         recipeModal.classList.add("hidden");
     }
 
-    // --- Event Listeners ---
+    // Event Listeners 
     closeModalBtn.addEventListener("click", closeModal);
     recipeModal.addEventListener("click", (e) => {
         if (e.target === recipeModal) closeModal();
@@ -104,6 +104,5 @@ document.addEventListener("DOMContentLoaded", () => {
     categoryFilter.addEventListener("change", renderRecipes);
     cuisineFilter.addEventListener("change", renderRecipes);
 
-    // --- Initial Load ---
     loadRecipes();
 });
