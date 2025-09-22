@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Contact Form Logic ---
   const form = document.getElementById("contact-form");
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -21,16 +20,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      // Get existing feedback or initialize an empty array
       const feedback = JSON.parse(localStorage.getItem("greenbite_feedback") || "[]");
       
-      // Add new feedback
       feedback.push({ name, email, message, date: new Date().toISOString() });
       
-      // Save back to localStorage
       localStorage.setItem("greenbite_feedback", JSON.stringify(feedback));
 
-      // Show confirmation and reset the form
       alert("Thank you for your message! We have received your feedback.");
       form.reset();
     });
@@ -41,13 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (accordionBtns) {
     accordionBtns.forEach((btn) => {
       btn.addEventListener("click", function() {
-        // Toggle active class on the button
         this.classList.toggle("active");
-        
-        // Get the panel
+ 
         const panel = this.nextElementSibling;
         
-        // Toggle the panel's max-height
         if (panel.style.maxHeight) {
           panel.style.maxHeight = null;
         } else {
@@ -56,4 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
 });
