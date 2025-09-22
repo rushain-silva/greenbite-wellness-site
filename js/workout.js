@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- DOM Elements ---
   const workoutForm = document.getElementById('workout-form');
   const workoutDisplay = document.getElementById('workout-display');
   const workoutList = document.getElementById('workout-list');
   const timerDisplay = document.getElementById('timer');
   const startTimerBtn = document.getElementById('start-timer-btn');
   
-  // --- Workout Data ---
+  // Workout Data
   const workouts = {
     'full-body': {
       'none': [
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // --- Event Listener for Form Submission ---
+  // Event Listener for Form Submission 
   workoutForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
@@ -89,19 +88,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- Timer Functionality ---
+  // Timer Functionality 
   let timerInterval;
   let timeInSeconds = 30;
-  const timerAudio = new Audio('assets/sounds/timer-complete.mp3'); // Add a sound file to this path
+  const timerAudio = new Audio('assets/sounds/timer-complete.mp3');
 
   startTimerBtn.addEventListener('click', () => {
-    if (startTimerBtn.disabled) return; // Prevent multiple clicks
+    if (startTimerBtn.disabled) return;
 
-    clearInterval(timerInterval); // Clear any existing timer
-    timeInSeconds = 30; // Reset time
+    clearInterval(timerInterval);
+    timeInSeconds = 30;
     updateTimerDisplay();
 
-    startTimerBtn.disabled = true; // Disable button while timer is running
+    startTimerBtn.disabled = true;
     
     timerInterval = setInterval(() => {
       timeInSeconds--;
@@ -110,11 +109,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (timeInSeconds <= 0) {
         clearInterval(timerInterval);
         timerDisplay.classList.add('finished');
-        timerAudio.play().catch(e => console.error("Audio play failed:", e)); // Play sound
+        timerAudio.play().catch(e => console.error("Audio play failed:", e));
         alert("Time's up! Great job.");
-        startTimerBtn.disabled = false; // Re-enable button
+        startTimerBtn.disabled = false; 
+
         
-        // Reset timer display after a short delay
         setTimeout(() => {
             timeInSeconds = 30;
             updateTimerDisplay();
